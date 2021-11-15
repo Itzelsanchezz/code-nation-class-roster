@@ -50,6 +50,6 @@ export default function App() {
     "2022"
   );
 
-  return ( {nameOne} {nameTwo} {nameThree} {nameFour});
+  return ({nameOne} {nameTwo} {nameThree} {nameFour});
 }
 
