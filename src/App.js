@@ -1,55 +1,48 @@
 import "./styles.css";
 
-function createrosterItem(firstName, lastName, pronouns, studentHS) {
+function createrosterItem(
+  firstName,
+  lastName,
+  personPronouns,
+  studentHS,
+  favoriteColor,
+  classYear
+) {
   let rosterItem = (
     <div class="row">
       <div class="name">
         {firstName} {lastName}
-        {}
       </div>
-      <div class="pronouns">{pronouns}</div>
+
+      <div class="pronouns">{personPronouns}</div>
+
+      <div class="school">{studentHS}</div>
+
+      <div class="color">{favoriteColor}</div>
+
+      <div class="class">{classYear}</div>
     </div>
   );
   return rosterItem;
 }
 
 export default function App() {
-  let nameOne = createrosterItem(
-    "Mikkail",
-    "Allen",
-    "he/his",
-    "Williamsburg",
-    "blue",
-    "2022"
-  );
+  let rosterList = [
+    ["Mikkail", "Allen", "he/his", "Williamsburg", "blue", "2022"],
+    ["Justin", "Apupalo", "he/his", "NYIT", "Blue", "2025"],
+    ["Christopher", "Bonifacio", "he/his", "OCA", "Blue", "2022"],
+    [
+      "Angel",
+      "Campoverde",
+      "he/his",
+      "Cristo Rey High school",
+      "Purple",
+      "2022"
+    ]
+  ];
 
-  let nameTwo = createrosterItem(
-    "Justin",
-    "Apupalo",
-    "he/his",
-    "NYIT",
-    "Blue",
-    "2025"
-  );
+  for (let roster of rosterList) {
+  }
 
-  let nameThree = createrosterItem(
-    "Christopher",
-    "Bonifacio",
-    "he/his",
-    "OCA",
-    "Blue",
-    "2022"
-  );
-
-  let nameFour = createrosterItem(
-    "Angel",
-    "Campoverde",
-    "he/his",
-    "Cristo Rey High school",
-    "Purple",
-    "2022"
-  );
-
-  return ({nameOne} {nameTwo} {nameThree} {nameFour});
+  return <div>{rosterList}</div>;
 }
-
