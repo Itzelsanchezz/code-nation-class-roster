@@ -10,9 +10,9 @@ function createrosterItem(
 ) {
   let rosterItem = (
     <div class="row">
-      <div class="name">
-        {firstName} {lastName}
-      </div>
+      <div class="fName">{firstName}</div>
+
+      <div class="lName">{lastName}</div>
 
       <div class="pronouns">{personPronouns}</div>
 
@@ -41,8 +41,10 @@ export default function App() {
     ]
   ];
 
+  let dataRows = rosterList.map(createrosterItem);
   for (let roster of rosterList) {
+    dataRows.push(createrosterItem(roster));
   }
 
-  return <div>{rosterList}</div>;
+  return <div>{dataRows}</div>;
 }
