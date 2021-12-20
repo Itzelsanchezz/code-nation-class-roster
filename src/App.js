@@ -1,8 +1,12 @@
 import "./styles.css";
 
-function createrosterItem(personInfo) {
+function createrosterItem(personInfo, i) {
+  let className = "";
+  if (i == 0) {
+    className = "header";
+  }
   let rosterItem = (
-    <tr>
+    <tr className={className}>
       <td>{personInfo.firstName}</td>
       <td>{personInfo.lastName}</td>
       <td>{personInfo.personPronouns}</td>
@@ -16,6 +20,15 @@ function createrosterItem(personInfo) {
 
 export default function App() {
   let rosterList = [
+    {
+      firstName: "Name",
+      lastName: " last name",
+      personPronouns: " Pronouns",
+      personHighschool: " Highschool",
+      favoriteColor: " Fav Color",
+      classYear: " Grad Year"
+    },
+
     {
       firstName: "Mikkail",
       lastName: " Allen",
